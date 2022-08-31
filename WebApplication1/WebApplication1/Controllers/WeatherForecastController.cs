@@ -26,7 +26,7 @@ namespace WebApplication1.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Dns.GetHostName()
+                Summary = Dns.GetHostName() + " - " + Request.Host.Host
             })
             .ToArray();
         }
